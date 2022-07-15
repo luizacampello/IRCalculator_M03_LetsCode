@@ -3,7 +3,7 @@ using IRCalculator.Services.IncomeTax.Aliquots;
 
 namespace IRCalculator.Services.IncomeTax
 {
-    public class IncomeTax : IIncomeTaxCalculator
+    public class IncomeTax : ITaxCalculator
     {
         private Aliquot a1;
         private Aliquot a2;
@@ -26,7 +26,7 @@ namespace IRCalculator.Services.IncomeTax
             a4.SetNext(a5);
         }
 
-        public double CalculateTax(IncomeDTO income)
+        public double TaxCalculation(IncomeDTO income)
         {
             return a1.TaxValue(income);
         }

@@ -12,10 +12,10 @@ namespace IRCalculator.Presentation
 {
     public class IncomeTaxFlow : IIncomeTaxFlow
     {
-        private readonly IIncomeTaxCalculator _incomeTax;
+        private readonly ITaxCalculator _incomeTax;
         private readonly IConsoleUI _consoleUI;
 
-        public IncomeTaxFlow(IIncomeTaxCalculator incomeTax, IConsoleUI consoleUI)
+        public IncomeTaxFlow(ITaxCalculator incomeTax, IConsoleUI consoleUI)
         {
             _incomeTax = incomeTax;
             _consoleUI = consoleUI;
@@ -47,7 +47,7 @@ namespace IRCalculator.Presentation
         private void CalculateIncomeTax(IncomeDTO newIncome)
         {
             Console.WriteLine();
-            Console.WriteLine($" - Valor a ser pago {_incomeTax.CalculateTax(newIncome).ToString("C")}");
+            Console.WriteLine($" - Valor a ser pago {_incomeTax.TaxCalculation(newIncome).ToString("C")}");
         }
 
         private IncomeDTO CreateIncome()

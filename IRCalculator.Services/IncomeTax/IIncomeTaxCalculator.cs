@@ -2,9 +2,9 @@
 
 namespace IRCalculator.Services.IncomeTax
 {
-    public interface IIncomeTaxCalculator
+    public interface ITaxCalculator
     {
-        public double CalculateTax(IncomeDTO income);
+        public double TaxCalculation(IncomeDTO income);
 
         public void PrintAliquotTable();
 

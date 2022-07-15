@@ -21,7 +21,7 @@ public class Program
     {
         services
             .AddScoped<IMainFlow, MainFlow>()
-            .AddScoped<IIncomeTaxCalculator, IncomeTax>()
+            .AddScoped<ITaxCalculator, IncomeTax>()
             .AddScoped<ITaxesFlow, TaxesFlow>()
             .AddScoped<IIncomeTaxFlow, IncomeTaxFlow>()
             .AddScoped<IConsoleUI, ConsoleUI>();
