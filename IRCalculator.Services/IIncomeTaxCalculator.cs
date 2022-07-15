@@ -6,7 +6,7 @@ namespace IRCalculator.Services
     {
         public double CalculateTax(IncomeDTO income);
 
-        public void PrintTaxesTable();
+        public void PrintAliquotTable();
 
     }
 }

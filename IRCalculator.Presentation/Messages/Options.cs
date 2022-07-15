@@ -18,7 +18,9 @@ namespace IRCalculator.Presentation.Messages
         public const string TaxesMenu = @"1 - Imposto de renda
 2 - Retornar ";
 
-        public const string InputCall = "Digite a opção desejada: ";  
+        public const string InputCall = "Digite a opção desejada: ";
+
+        public const string InputValueCall = "Digite renda anual (Formato: 1213,12): ";
 
 
 

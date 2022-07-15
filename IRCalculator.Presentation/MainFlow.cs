@@ -11,7 +11,6 @@ namespace IRCalculator.Presentation
 {
     public class MainFlow : IMainFlow
     {
-
         private readonly ITaxesFlow _taxesFlow;
         private readonly IConsoleUI _consoleUI;
 
@@ -23,23 +22,25 @@ namespace IRCalculator.Presentation
 
         public void BeginApp()
         {
-            int userOption = -1;
+            int userOption = 0;
 
             while (userOption != 2)
             {
-                _consoleUI.DisplayScreen(Header.TaxesMenu, Options.TaxesMenu, Options.InputCall);
-                userOption = _consoleUI.InputUserOption(1, 2);                
+                _consoleUI.DisplayScreen(Header.MainMenu, Options.MainMenu);
+                userOption = _consoleUI.InputUserOption(1, 2, Options.InputCall);                
 
                 switch (userOption)
                 {
                     case 1:
                         _taxesFlow.NavigateTaxesMenu();
                         break;
+
                     case 2:
                         break;
                 }
             }                     
             
         }
+
     }
 }

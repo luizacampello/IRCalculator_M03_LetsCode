@@ -11,7 +11,7 @@ namespace IRCalculator.Presentation.Messages
         public const string MainMenu = @"-------------------- Calculadora de Impostos --------------------
 ";
 
-        public const string IRMenu = @"-------------------- Calculadora de Imposto de Renda --------------------
+        public const string IncomeTaxMenu = @"-------------------- Calculadora de Imposto de Renda --------------------
 ";
 
         public const string TaxesMenu = @"-------------------- Impostos --------------------

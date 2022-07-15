@@ -21,21 +21,21 @@ namespace IRCalculator.Presentation
 
         public void NavigateTaxesMenu()
         {
-            _consoleUI.DisplayScreen(Header.TaxMenu, Options.MainMenu, Options.InputCall);
-            int userOption = _consoleUI.InputUserOption(1, 2);
+            _consoleUI.DisplayScreen(Header.TaxesMenu, Options.TaxesMenu);
+            int userOption = _consoleUI.InputUserOption(1, 2, Options.InputCall);
 
             switch (userOption)
             {
                 case 1:
                     _incomeTaxFlow.NavigateIncomeTaxMenu();
                     break;
+
                 case 2:
+                    _consoleUI.ReturnMenu();
                     break;                
             }
-            ScreenPresenter.ReturnMenu();
-        }
-
-        
+            
+        }       
 
     }
 }

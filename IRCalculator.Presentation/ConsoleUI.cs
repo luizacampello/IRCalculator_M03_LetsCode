@@ -1,4 +1,5 @@
-﻿using IRCalculator.Presentation.Messages;
+﻿using IRCalculator.Presentation.Interfaces;
+using IRCalculator.Presentation.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace IRCalculator.Presentation
 {
     public class ConsoleUI : IConsoleUI
     {
-        private string ComposeScreen(string header, string options, string askSomething)
+        private string ComposeScreen(string header, string options)
         {
             StringBuilder sb = new();
 
@@ -17,23 +18,26 @@ namespace IRCalculator.Presentation
 
             sb.AppendLine(options);
 
-            sb.AppendLine(askSomething);
+            sb.AppendLine(string.Empty);
 
             return sb.ToString();
         }
 
-        public void DisplayScreen(string header, string options = "", string askSomething = "")
+        public void DisplayScreen(string header, string options)
         {
             Console.Clear();
-            Console.WriteLine(ComposeScreen(header, options, askSomething));
+            Console.WriteLine(ComposeScreen(header, options));
         }
 
-        public int InputUserOption(int fisrtOption, int lastOption)
+        public int InputUserOption(int fisrtOption, int lastOption, string inputMessage)
         {
             bool validInput = false;
 
+            
+
             while (!validInput)
             {
+                Console.Write(inputMessage);
                 string userInput = Console.ReadLine();
 
                 if (String.IsNullOrWhiteSpace(userInput))
@@ -52,6 +56,7 @@ namespace IRCalculator.Presentation
                     }
 
                     PrintError(Errors.InvalidOption);
+                    continue;
                 }
 
                 PrintError(Errors.InvalidFormat);
@@ -60,12 +65,14 @@ namespace IRCalculator.Presentation
             throw new Exception();
         }
 
-        public double InputIncomeValue()
+        public double InputIncomeValue(string inputMessage)
         {
-            bool validInput = false;
+            Console.Clear();
+            bool validInput = false;            
 
             while (!validInput)
             {
+                Console.Write(inputMessage);
                 string userInput = Console.ReadLine();
 
                 if (String.IsNullOrWhiteSpace(userInput))
@@ -73,8 +80,7 @@ namespace IRCalculator.Presentation
                     PrintError(Errors.NullOrWhiteSpaceInput);
                     continue;
                 }
-
-                userInput.Replace('.', ',');
+                             
 
                 bool validFormat = double.TryParse(userInput, out double validFormatUserInput);
 
@@ -98,7 +104,7 @@ namespace IRCalculator.Presentation
             Console.ResetColor();
         }
 
-        public static void ReturnMenu()
+        public void ReturnMenu()
         {
             Console.WriteLine();
             Console.Write("Pressione qualquer tecla para retornar ao menu inicial");

@@ -23,29 +23,38 @@ namespace IRCalculator.Presentation
 
         public void NavigateIncomeTaxMenu()
         {
-            var selectedMenu = ScreenPresenter.GetOption(
-                ScreenPresenter.ComposeScreen(Header.IRMenu, Options.TaxMenu), 1, 3);
-                        
-            switch (selectedMenu)
+            _consoleUI.DisplayScreen(Header.IncomeTaxMenu, Options.IncomeTaxMenu);
+            int userOption = _consoleUI.InputUserOption(1, 3, Options.InputCall);
+
+            switch (userOption)
             {
                 case 1:
-                    double income = _consoleUI.InputIncomeValue();
-                    IncomeDTO newIncome = new(income);
-                    Calcular(newIncome);
+                    IncomeDTO newIncome = CreateIncome();
+                    CalculateIncomeTax(newIncome);
                     break;
+
                 case 2:
-                    _incomeTax.PrintTaxesTable();
+                    _incomeTax.PrintAliquotTable();
                     break;
+
                 case 3:
                     break;
             }
 
-            ScreenPresenter.ReturnMenu();
+            _consoleUI.ReturnMenu();
         }
 
-        private void Calcular(IncomeDTO income)
+        private void CalculateIncomeTax(IncomeDTO newIncome)
         {
-            Console.WriteLine(_incomeTax.CalculateTax(income));
+            Console.WriteLine();
+            Console.WriteLine($" - Valor a ser pago {_incomeTax.CalculateTax(newIncome).ToString("C")}");
         }
+
+        private IncomeDTO CreateIncome()
+        {
+            double income = _consoleUI.InputIncomeValue(Options.InputValueCall);
+            return new(income);
+        }
+
     }
 }

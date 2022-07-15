@@ -26,17 +26,18 @@ namespace IRCalculator.Services.IncomeTax
             a4.SetNext(a5);
         }
 
-
         public double CalculateTax(IncomeDTO income)
         {
             return a1.TaxValue(income);
         }
 
-        public void PrintTaxesTable()
+        public void PrintAliquotTable()
         {
             Aliquot currentAliquot = a1;
 
+            Console.WriteLine();
             Console.WriteLine("      Faixas de valor($)      |  Alíquota  |  Dedução");
+
             while (currentAliquot.Next != null)
             {
                 Console.WriteLine($"R$ {String.Format("{0:0.00}", currentAliquot.inferiorLimit),-10} - R$ {String.Format("{0:0.00}", currentAliquot.superiorLimit),-10} | {currentAliquot.taxAliquot,-10} | {currentAliquot.deduction, -10}");
