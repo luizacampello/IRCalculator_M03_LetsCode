@@ -1,6 +1,6 @@
 ﻿using IRCalculator.Domain;
 
-namespace IRCalculator.Services
+namespace IRCalculator.Services.IncomeTax
 {
     public interface IIncomeTaxCalculator
     {

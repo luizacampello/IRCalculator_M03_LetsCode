@@ -1,7 +1,7 @@
 ﻿using IRCalculator.Domain;
 using IRCalculator.Presentation.Interfaces;
 using IRCalculator.Presentation.Messages;
-using IRCalculator.Services;
+using IRCalculator.Services.IncomeTax;
 using System;
 using System.Collections.Generic;
 using System.Linq;
