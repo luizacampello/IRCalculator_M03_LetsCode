@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRCalculator", "IRCalculator\IRCalculator.csproj", "{EF0745FE-B284-4C71-A322-E1FC4ED00BE0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{134FABD3-C6EF-4880-911F-8EEEA82A45BF} = {134FABD3-C6EF-4880-911F-8EEEA82A45BF}
+		{59181F4B-08C8-4920-AAA8-EB6BF21AEC99} = {59181F4B-08C8-4920-AAA8-EB6BF21AEC99}
+		{9D20B2C7-2BD2-4847-8109-9EB5F8AF354E} = {9D20B2C7-2BD2-4847-8109-9EB5F8AF354E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRCalculator.Domain", "IRCalculator.Domain\IRCalculator.Domain.csproj", "{134FABD3-C6EF-4880-911F-8EEEA82A45BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRCalculator.Services", "IRCalculator.Services\IRCalculator.Services.csproj", "{9D20B2C7-2BD2-4847-8109-9EB5F8AF354E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRCalculator.Presentation", "IRCalculator.Presentation\IRCalculator.Presentation.csproj", "{59181F4B-08C8-4920-AAA8-EB6BF21AEC99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF0745FE-B284-4C71-A322-E1FC4ED00BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0745FE-B284-4C71-A322-E1FC4ED00BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0745FE-B284-4C71-A322-E1FC4ED00BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0745FE-B284-4C71-A322-E1FC4ED00BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134FABD3-C6EF-4880-911F-8EEEA82A45BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134FABD3-C6EF-4880-911F-8EEEA82A45BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134FABD3-C6EF-4880-911F-8EEEA82A45BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134FABD3-C6EF-4880-911F-8EEEA82A45BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D20B2C7-2BD2-4847-8109-9EB5F8AF354E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D20B2C7-2BD2-4847-8109-9EB5F8AF354E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D20B2C7-2BD2-4847-8109-9EB5F8AF354E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D20B2C7-2BD2-4847-8109-9EB5F8AF354E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59181F4B-08C8-4920-AAA8-EB6BF21AEC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59181F4B-08C8-4920-AAA8-EB6BF21AEC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59181F4B-08C8-4920-AAA8-EB6BF21AEC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59181F4B-08C8-4920-AAA8-EB6BF21AEC99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BC2E9C0-4E14-448A-9699-48B549EE4A3C}
+	EndGlobalSection
+EndGlobal
