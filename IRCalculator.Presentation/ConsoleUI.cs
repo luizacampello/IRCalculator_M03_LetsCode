@@ -31,9 +31,7 @@ namespace IRCalculator.Presentation
 
         public int InputUserOption(int fisrtOption, int lastOption, string inputMessage)
         {
-            bool validInput = false;
-
-            
+            bool validInput = false;            
 
             while (!validInput)
             {
